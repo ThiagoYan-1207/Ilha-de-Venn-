@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival dos Conjuntos - Diagramas de Venn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-card">
+        <!-- Tela Inicial / Boas-Vindas -->
+        <section id="screen-welcome" class="screen active">
+            <div class="hero-header">
+                <div class="icon-emoji">🎪</div>
+                <h1>Festival dos Conjuntos</h1>
+            </div>
+            <p class="subtitle">Embarque na Ilha de Venn! Decifre a contagem dos grupos e organize o público do festival.</p>
+            <div class="button-group">
+                <button id="btn-start" class="btn btn-primary" onclick="startGame()">▶ Iniciar Jogo</button>
+                <button id="btn-tutorial" class="btn btn-secondary" onclick="showTutorial()">❓ Como Jogar</button>
+            </div>
+        </section>
+
+        <!-- Modal de Tutorial com Diagrama CSS Nativo -->
+        <div id="modal-tutorial" class="modal hidden">
+            <div class="modal-content">
+                <h2>📊 Tutorial: Diagrama de Venn</h2>
+                <div class="tutorial-venn-preview">
+                    <div class="mini-circle mini-a">A</div>
+                    <div class="mini-intersection">A ∩ B</div>
+                    <div class="mini-circle mini-b">B</div>
+                </div>
+                <ul class="tutorial-list">
+                    <li><strong>Apenas A:</strong> Elementos exclusivos do grupo A.</li>
+                    <li><strong>Apenas B:</strong> Elementos exclusivos do grupo B.</li>
+                    <li><strong>Interseção (A ∩ B):</strong> Elementos em A E B ao mesmo tempo.</li>
+                    <li><strong>União (A ∪ B):</strong> Total em A ou B: <code>n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</code>.</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="closeTutorial()">Fechar Tutorial</button>
+            </div>
+        </div>
+
+        <!-- Tela Principal do Jogo -->
+        <section id="screen-game" class="screen">
+            <div class="hud">
+                <span id="question-tracker" class="badge">Questão 1 de 5</span>
+                <span id="score-tracker" class="badge badge-score">Pontuação: 0</span>
+            </div>
+
+            <div class="quiz-box">
+                <h3 id="question-title">Desafio #1</h3>
+                <p id="question-text">Carregando enunciado...</p>
+                
+                <!-- Diagrama de Venn Visual -->
+                <div class="venn-wrapper">
+                    <div class="circle circle-a"><span>A</span></div>
+                    <div class="circle circle-b"><span>B</span></div>
+                </div>
+
+                <!-- Opções de Resposta (Embaralhadas) -->
+                <div id="options-container" class="options-grid"></div>
+            </div>
+        </section>
+
+        <!-- Modal de Feedback -->
+        <div id="modal-feedback" class="modal hidden">
+            <div class="modal-content text-center">
+                <div id="feedback-icon" class="feedback-icon-large">🎉</div>
+                <h2 id="feedback-title">Resultado</h2>
+                <p id="feedback-message"></p>
+                <div id="math-explanation" class="explanation-box"></div>
+                <button id="btn-next" class="btn btn-primary" onclick="nextQuestion()">Próxima Questão ➔</button>
+            </div>
+        </div>
+
+        <!-- Tela Final / Pontuação -->
+        <section id="screen-end" class="screen">
+            <div class="icon-emoji">🏆</div>
+            <h2>Fim da Sessão!</h2>
+            <p id="final-score-text" class="final-score"></p>
+            <button class="btn btn-primary" onclick="restartGame()">🔄 Jogar Novamente</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
