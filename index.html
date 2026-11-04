@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival dos Conjuntos - Diagramas de Venn</title>
+    <title>Laboratório de Funções - Matemática para Computação</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,32 +12,28 @@
         <!-- Tela Inicial / Boas-Vindas -->
         <section id="screen-welcome" class="screen active">
             <div class="hero-header">
-                <div class="icon-emoji">🎪</div>
-                <h1>Festival dos Conjuntos</h1>
+                <div class="icon-emoji">📈</div>
+                <h1>Laboratório de Funções</h1>
             </div>
-            <p class="subtitle">Embarque na Ilha de Venn! Decifre a contagem dos grupos e organize o público do festival.</p>
+            <p class="subtitle">Explore o Reino das Transformações! Domine injetividade, sobrejetividade, composição e funções inversas.</p>
             <div class="button-group">
-                <button id="btn-start" class="btn btn-primary" onclick="startGame()">▶ Iniciar Jogo</button>
-                <button id="btn-tutorial" class="btn btn-secondary" onclick="showTutorial()">❓ Como Jogar</button>
+                <button id="btn-start" class="btn btn-primary" onclick="startGame()">▶️ Iniciar Desafio</button>
+                <button id="btn-tutorial" class="btn btn-secondary" onclick="showTutorial()">❓ Guia de Funções</button>
             </div>
         </section>
 
-        <!-- Modal de Tutorial com Diagrama CSS Nativo -->
+        <!-- Modal de Tutorial / Guia de Funções -->
         <div id="modal-tutorial" class="modal hidden">
             <div class="modal-content">
-                <h2>📊 Tutorial: Diagrama de Venn</h2>
-                <div class="tutorial-venn-preview">
-                    <div class="mini-circle mini-a">A</div>
-                    <div class="mini-intersection">A ∩ B</div>
-                    <div class="mini-circle mini-b">B</div>
-                </div>
+                <h2>📊 Guia: Teoria de Funções</h2>
                 <ul class="tutorial-list">
-                    <li><strong>Apenas A:</strong> Elementos exclusivos do grupo A.</li>
-                    <li><strong>Apenas B:</strong> Elementos exclusivos do grupo B.</li>
-                    <li><strong>Interseção (A ∩ B):</strong> Elementos em A E B ao mesmo tempo.</li>
-                    <li><strong>União (A ∪ B):</strong> Total em A ou B: <code>n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</code>.</li>
+                    <li><strong>Injetora:</strong> Elementos distintos do domínio possuem imagens distintas.</li>
+                    <li><strong>Sobrejetora:</strong> O conjunto imagem é igual ao contradomínio.</li>
+                    <li><strong>Bijetora:</strong> Acumula as propriedades injetora e sobrejetora (admite inversa).</li>
+                    <li><strong>Composição (f ∘ g):</strong> Aplicar uma função no resultado de outra: <code>f(g(x))</code>.</li>
+                    <li><strong>Inversa (f⁻¹):</strong> Reverte o mapeamento original trocando domínio e imagem.</li>
                 </ul>
-                <button class="btn btn-secondary" onclick="closeTutorial()">Fechar Tutorial</button>
+                <button class="btn btn-secondary" onclick="closeTutorial()">Fechar Guia</button>
             </div>
         </div>
 
@@ -52,10 +48,10 @@
                 <h3 id="question-title">Desafio #1</h3>
                 <p id="question-text">Carregando enunciado...</p>
                 
-                <!-- Diagrama de Venn Visual -->
+                <!-- Ícone Visual de Transformação -->
                 <div class="venn-wrapper">
-                    <div class="circle circle-a"><span>A</span></div>
-                    <div class="circle circle-b"><span>B</span></div>
+                    <div class="circle circle-a"><span>X</span></div>
+                    <div class="circle circle-b"><span>Y</span></div>
                 </div>
 
                 <!-- Opções de Resposta (Embaralhadas) -->
