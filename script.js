@@ -1,84 +1,84 @@
-// Banco de Dados de Questões (10 questões sobre conjuntos e Venn)
+
 const questionBank = [
     {
         id: 1,
-        title: "Palco Principal e Tenda Eletrônica",
-        text: "No Festival, 120 pessoas foram ao Palco Principal (A) e 80 à Tenda Eletrônica (B). Se 30 foram a ambos, quantas pessoas foram ao festival no total?",
-        options: ["170", "200", "150", "230"],
-        answer: "170",
-        explanation: "Princípio da Inclusão-Exclusão: n(A ∪ B) = n(A) + n(B) - n(A ∩ B) = 120 + 80 - 30 = 170."
+        title: "Classificação de Funções: Injetora",
+        text: "Dada a função f: A → B definida por f(x) = 2x + 3, onde A e B são conjuntos de números reais. Como essa função pode ser classificada quanto à injetividade?",
+        options: ["Injetora", "Não injetora", "Sobrejetora apenas", "Constante"],
+        answer: "Injetora",
+        explanation: "Uma função é injetora se elementos distintos do domínio possuem imagens distintas. Se f(a) = f(b) ⟹ 2a + 3 = 2b + 3 ⟹ a = b, logo a função é injetora."
     },
     {
         id: 2,
-        title: "Praça de Alimentação",
-        text: "Em um grupo de 100 visitantes, 60 compraram hambúrguer (H) e 50 pizza (P). Se 20 compraram ambos, quantos não compraram nenhum?",
-        options: ["10", "20", "30", "15"],
-        answer: "10",
-        explanation: "Total que comprou pelo menos um: n(H ∪ P) = 60 + 50 - 20 = 90. Logo, 100 - 90 = 10 não compraram nenhum."
+        title: "Função Sobrejetora",
+        text: "Seja a função f: ℝ → ℝ dada por f(x) = x³. Qual é a afirmação correta sobre a sua sobrejetividade?",
+        options: ["É sobrejetora", "Não é sobrejetora", "É apenas injetora", "Não é função"],
+        answer: "É sobrejetora",
+        explanation: "Para todo elemento y no contradomínio (ℝ), existe um x = ∛y no domínio tal que f(x) = y. Como o conjunto imagem coincide com o contradomínio, a função é sobrejetora."
     },
     {
         id: 3,
-        title: "Oficinas do Festival",
-        text: "45 pessoas fizeram Pintura (A) e 35 Escultura (B). Se 10 fizeram ambas, quantas participaram APENAS da oficina de Pintura?",
-        options: ["35", "45", "25", "10"],
-        answer: "35",
-        explanation: "Apenas A = n(A) - n(A ∩ B) = 45 - 10 = 35."
+        title: "Função Bijetora",
+        text: "Uma função f: A → B é bijetora se, e somente se, ela for:",
+        options: ["Injetora e sobrejetora", "Apenas injetora", "Apenas sobrejetora", "Par e periódica"],
+        answer: "Injetora e sobrejetora",
+        explanation: "Por definição, uma função bijetora acumula ambas as propriedades: injetora (elementos diferentes têm imagens diferentes) e sobrejetora (todo elemento do contradomínio tem pré-imagem)."
     },
     {
         id: 4,
-        title: "Preferência de Bebidas",
-        text: "De 80 pessoas, 50 bebem suco, 40 água e 15 ambos. Quantas pessoas não bebem nem suco nem água?",
-        options: ["5", "10", "15", "20"],
-        answer: "5",
-        explanation: "n(A ∪ B) = 50 + 40 - 15 = 75. Fora dos conjuntos = 80 - 75 = 5."
+        title: "Composição de Funções",
+        text: "Dadas as funções f(x) = 3x + 1 e g(x) = x² - 2, qual é o valor da função composta f(g(2))?",
+        options: ["7", "4", "10", "15"],
+        answer: "7",
+        explanation: "Primeiro calculamos g(2): g(2) = (2)² - 2 = 4 - 2 = 2. Depois aplicamos em f: f(g(2)) = f(2) = 3(2) + 1 = 6 + 1 = 7."
     },
     {
         id: 5,
-        title: "Jogos Indie",
-        text: "Na área de jogos, 70 jogaram RPG e 40 Estratégia. Se 100 jogaram pelo menos um, quantos jogaram AMBOS?",
-        options: ["10", "20", "30", "15"],
-        answer: "10",
-        explanation: "n(A ∩ B) = n(A) + n(B) - n(A ∪ B) = 70 + 40 - 100 = 10."
+        title: "Função Inversa",
+        text: "Dada a função bijetora f(x) = 4x - 8, qual é a lei da sua função inversa f⁻¹(x)?",
+        options: ["f⁻¹(x) = (x + 8) / 4", "f⁻¹(x) = 4x + 8", "f⁻¹(x) = (x - 4) / 8", "f⁻¹(x) = 8x - 4"],
+        answer: "f⁻¹(x) = (x + 8) / 4",
+        explanation: "Trocamos x por y: x = 4y - 8. Isolando y: x + 8 = 4y ⟹ y = (x + 8) / 4. Portanto, f⁻¹(x) = (x + 8) / 4."
     },
     {
         id: 6,
-        title: "Transporte do Evento",
-        text: "Das 200 pessoas entrevistadas, 120 usaram Ônibus e 90 Metrô. Se todas usaram pelo menos um transporte, quantas usaram ambos?",
-        options: ["10", "30", "50", "20"],
-        answer: "10",
-        explanation: "n(A ∩ B) = 120 + 90 - 200 = 10."
+        title: "Composição Algébrica",
+        text: "Se f(x) = x + 5 e g(x) = 2x, qual é a expressão algébrica da função composta (f ∘ g)(x)?",
+        options: ["2x + 5", "2x + 10", "x² + 5x", "2(x + 5)"],
+        answer: "2x + 5",
+        explanation: "(f ∘ g)(x) = f(g(x)) = f(2x) = (2x) + 5 = 2x + 5."
     },
     {
         id: 7,
-        title: "Acessórios do Festival",
-        text: "50 usavam óculos escuros, 40 usavam boné. Se 15 usavam ambos e 10 nenhum dos dois, qual o público total consultado?",
-        options: ["85", "75", "90", "105"],
-        answer: "85",
-        explanation: "n(A ∪ B) = 50 + 40 - 15 = 75. Total = 75 + 10 sem acessórios = 85."
+        title: "Inversível e Bijetora",
+        text: "Para que uma função admita uma função inversa f⁻¹, qual condição fundamental ela precisa satisfazer?",
+        options: ["Ser bijetora", "Ser apenas injetora", "Ser constante", "Ter grau par"],
+        answer: "Ser bijetora",
+        explanation: "Uma função só é inversível em todo o seu domínio e contradomínio se for bijeção (ao mesmo tempo injetora e sobrejetora)."
     },
     {
         id: 8,
-        title: "Sorteio de Brindes",
-        text: "30 pessoas ganharam camisas e 25 ganharam bonés. Se 5 pessoas ganharam ambos os brindes, quantas ganharam pelo menos um?",
-        options: ["50", "55", "45", "60"],
-        answer: "50",
-        explanation: "n(A ∪ B) = 30 + 25 - 5 = 50."
+        title: "Análise de Injetividade Gráfica",
+        text: "No plano cartesiano, como podemos testar visualmente se uma função é injetora?",
+        options: ["Teste da linha horizontal", "Teste da linha vertical", "Verificando se corta a origem", "Analisando o vértice"],
+        answer: "Teste da linha horizontal",
+        explanation: "Pelo teste da linha horizontal, se qualquer linha horizontal interceptar o gráfico da função em no máximo um ponto, a função é injetora."
     },
     {
         id: 9,
-        title: "Workshops de Programação",
-        text: "De 60 alunos, 40 fizeram HTML e 30 JS. Se 5 não se inscreveram em nenhum, quantos fizeram AMBOS?",
-        options: ["15", "10", "20", "25"],
-        answer: "15",
-        explanation: "n(A ∪ B) = 60 - 5 = 55. n(A ∩ B) = 40 + 30 - 55 = 15."
+        title: "Composição Inversa",
+        text: "Se f(x) é uma função bijetora e f⁻¹ é sua inversa, quanto vale a composição (f ∘ f⁻¹)(x)?",
+        options: ["x", "1", "0", "x²"],
+        answer: "x",
+        explanation: "A composição de uma função bijetora com a sua inversa resulta sempre na função identidade, ou seja, (f ∘ f⁻¹)(x) = x."
     },
     {
         id: 10,
-        title: "Sessão de Autógrafos",
-        text: "100 fãs compareceram. 80 tiraram foto com a atração A e 40 com a B. Se todos tiraram pelo menos uma foto, quantos tiraram com AMBAS?",
-        options: ["20", "40", "10", "30"],
-        answer: "20",
-        explanation: "n(A ∩ B) = 80 + 40 - 100 = 20."
+        title: "Aplicação Prática de Inversa",
+        text: "Uma locadora de veículos cobra uma taxa fixa de R$ 50,00 mais R$ 20,00 por quilômetro rodado, expressa por C(km) = 20(km) + 50. Qual função permite descobrir os quilômetros rodados a partir do custo C?",
+        options: ["km(C) = (C - 50) / 20", "km(C) = (C + 50) / 20", "km(C) = 20C - 50", "km(C) = C / 20 - 50"],
+        answer: "km(C) = (C - 50) / 20",
+        explanation: "Isolando a variável de quilometragem: C = 20km + 50 ⟹ C - 50 = 20km ⟹ km = (C - 50) / 20, que representa a função inversa."
     }
 ];
 
@@ -86,7 +86,6 @@ let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Função de embaralhamento (Fisher-Yates) para as questões e alternativas
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -95,12 +94,12 @@ function shuffleArray(array) {
     return array;
 }
 
-// Efeito Sonoro em Web Audio API
 function playSound(isCorrect) {
     try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
+        
         osc.connect(gain);
         gain.connect(ctx.destination);
         
@@ -116,11 +115,9 @@ function playSound(isCorrect) {
         gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + 0.3);
         osc.stop(ctx.currentTime + 0.3);
     } catch (e) {
-        // Ignora caso o navegador bloqueie autoplay
     }
 }
 
-// Início do jogo e sorteio de 5 questões
 function startGame() {
     selectedQuestions = shuffleArray([...questionBank]).slice(0, 5);
     currentQuestionIndex = 0;
@@ -134,6 +131,7 @@ function startGame() {
 
 function loadQuestion() {
     const q = selectedQuestions[currentQuestionIndex];
+    
     document.getElementById("question-tracker").innerText = `Questão ${currentQuestionIndex + 1} de 5`;
     document.getElementById("score-tracker").innerText = `Pontuação: ${score}`;
     document.getElementById("question-title").innerText = q.title;
@@ -142,7 +140,7 @@ function loadQuestion() {
     const optionsContainer = document.getElementById("options-container");
     optionsContainer.innerHTML = "";
 
-    // Embaralha as alternativas para que a resposta correta não fique sempre na primeira posição
+    // Embaralha as alternativas
     const shuffledOptions = shuffleArray([...q.options]);
 
     shuffledOptions.forEach(option => {
@@ -153,7 +151,6 @@ function loadQuestion() {
     });
 }
 
-// Validação de resposta e feedback visual
 function checkAnswer(userChoice) {
     const q = selectedQuestions[currentQuestionIndex];
     const isCorrect = (userChoice === q.answer);
@@ -161,15 +158,16 @@ function checkAnswer(userChoice) {
     playSound(isCorrect);
 
     const feedbackIcon = document.getElementById("feedback-icon");
+    const feedbackTitle = document.getElementById("feedback-title");
 
     if (isCorrect) {
         score += 20;
-        document.getElementById("feedback-title").innerText = "🎉 Resposta Correta!";
-        document.getElementById("feedback-title").style.color = "#2ecc71";
+        feedbackTitle.innerText = "🎉 Resposta Correta!";
+        feedbackTitle.style.color = "#2ecc71";
         feedbackIcon.innerText = "✅";
     } else {
-        document.getElementById("feedback-title").innerText = "❌ Resposta Incorreta!";
-        document.getElementById("feedback-title").style.color = "#e74c3c";
+        feedbackTitle.innerText = "❌ Resposta Incorreta!";
+        feedbackTitle.style.color = "#e74c3c";
         feedbackIcon.innerText = "❌";
     }
 
@@ -201,5 +199,10 @@ function restartGame() {
     document.getElementById("screen-welcome").classList.add("active");
 }
 
-function showTutorial() { document.getElementById("modal-tutorial").classList.remove("hidden"); }
-function closeTutorial() { document.getElementById("modal-tutorial").classList.add("hidden"); }
+function showTutorial() {
+    document.getElementById("modal-tutorial").classList.remove("hidden");
+}
+
+function closeTutorial() {
+    document.getElementById("modal-tutorial").classList.add("hidden");
+}
