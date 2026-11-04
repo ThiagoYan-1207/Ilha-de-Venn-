@@ -45,7 +45,7 @@ body {
 h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    background: linear-gradient(90deg, #4776e6, #8e54e9);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -69,15 +69,15 @@ h1 {
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #ff416c 0%, #ff4b2b 100%);
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
-}
-
-.btn-secondary {
     background: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
     color: white;
     box-shadow: 0 4px 15px rgba(71, 118, 230, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(90deg, #ff416c 0%, #ff4b2b 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
 }
 
 .btn:hover {
@@ -130,7 +130,7 @@ h1 {
 
 .options-grid button:hover {
     background: rgba(255, 255, 255, 0.25);
-    border-color: #ff416c;
+    border-color: #4776e6;
 }
 
 .venn-wrapper {
@@ -138,6 +138,9 @@ h1 {
     height: 100px;
     margin: 15px auto;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle {
@@ -151,33 +154,8 @@ h1 {
     font-weight: bold;
 }
 
-.circle-a { background: rgba(255, 65, 108, 0.6); left: 30px; }
-.circle-b { background: rgba(71, 118, 230, 0.6); right: 30px; }
-
-/* Mini preview do tutorial */
-.tutorial-venn-preview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-.mini-circle {
-    width: 50px; height: 50px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(71, 118, 230, 0.5);
-    border: 1px solid #fff;
-}
-.mini-b { background: rgba(255, 65, 108, 0.5); margin-left: -15px; }
-.mini-intersection {
-    z-index: 2;
-    background: rgba(46, 204, 113, 0.8);
-    padding: 4px;
-    border-radius: 4px;
-    margin-left: -15px;
-    margin-right: -15px;
-}
+.circle-a { background: rgba(71, 118, 230, 0.6); left: 30px; }
+.circle-b { background: rgba(255, 65, 108, 0.6); right: 30px; }
 
 .tutorial-list {
     font-size: 0.9rem;
@@ -186,7 +164,7 @@ h1 {
     text-align: left;
     color: #d1d1e0;
 }
-.tutorial-list li { margin-bottom: 6px; }
+.tutorial-list li { margin-bottom: 8px; }
 
 .modal {
     position: fixed;
@@ -215,7 +193,7 @@ h1 {
 
 .explanation-box {
     background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #8e54e9;
+    border-left: 4px solid #4776e6;
     padding: 12px;
     margin: 15px 0;
     font-size: 0.85rem;
